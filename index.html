@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👱‍♂️</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header name="top">
+            <a href="">Marek Istok</a>
+    
+            <!-- <nav>
+                <a href="">home</a>
+            </nav> -->
+        </header>
+        
+        <button class="theme-switch"onclick="change_theme();">💡</button>
+
+        <main>
+            <section>
+                <h1>Hello, I'm Marek Istok</h1>
+                <p>What I'm currently doing</p>
+                <ul>
+                    <li>
+                        🔬 Research Assistant at <a href="https://www.mgmt.ucl.ac.uk/">University College London</a>
+                    </li>
+                    <li>
+                        🏢 Junior Business Analyst at <a href="https://www.inogesis.com/">Inogesis</a>
+                    </li>
+                    <li>
+                        👨‍🎓 2<sup>nd</sup> year BSc Management Science student at <a href="https://www.mgmt.ucl.ac.uk/">University College London</a>
+                    </li>
+                </ul>
+
+            </section>
+            <section>
+                <div class="cards">
+                    <div class="card-item">
+                        <h1>Links</h1>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/marekistoks/">LinkedIn</a></li>
+                            <li><a href="https://github.com/marekistok">GitHub</a></li>
+                            <li><a href="https://www.instagram.com/marekistoks/">Instagram</a></li>
+                        </ul>
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <a href="#top" class="button_top">&uarr;</a>
+
+    <script>
+        let theme = window.localStorage.getItem('theme') || 'light';
+        
+        document.body.classList = theme;
+
+        let change_theme = () => {
+            if (document.body.classList == 'light') {
+                document.body.classList = 'dark';
+                window.localStorage.setItem('theme', 'dark')
+            } else {
+                document.body.classList = 'light';
+                window.localStorage.setItem('theme', 'light')
+            }
+        }
+    </script>
+    
+</body>
+</html>
